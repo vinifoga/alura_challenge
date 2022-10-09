@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const NewApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -90,6 +90,88 @@ class MyApp extends StatelessWidget {
               },
               child: const Text('Aperte o Botão!'),
             )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class NewApp extends StatelessWidget {
+  const NewApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Container(
+        color: Colors.black,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+                Container(
+                  color: Colors.red,
+                  width: 50,
+                  height: 50,
+                ),
+              ],
+            ),
           ],
         ),
       ),
