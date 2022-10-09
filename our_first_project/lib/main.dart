@@ -70,6 +70,25 @@ class MyApp extends StatelessWidget {
                   height: 50,
                 ),
               ],
+            ),
+            Container(
+              color: Colors.amber,
+              height: 30,
+              width: 300,
+              child: const Text(
+                'Diamante Amarelo',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 28,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print('Apertou o Botão');
+              },
+              child: const Text('Aperte o Botão!'),
             )
           ],
         ),
