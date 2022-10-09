@@ -15,33 +15,23 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Container(
-        color: Colors.white,
-        child: Stack(
-          alignment: AlignmentDirectional.center,
-          children: [
-            Container(
-              color: Colors.black,
-              width: 300,
-              height: 300,
-            ),
-            Container(
-              color: Colors.red,
-              width: 150,
-              height: 150,
-            ),
-            Container(
-              color: Colors.blue,
-              width: 75,
-              height: 75,
-            ),
-            Container(
-              color: Colors.yellow,
-              width: 37,
-              height: 37,
-            )
-          ],
-        ),
-      ),
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Container(
+                color: Colors.red,
+                width: 150,
+                height: 150,
+              ),
+              Container(
+                color: Colors.blue,
+                width: 75,
+                height: 75,
+              ),
+            ],
+          )),
     );
   }
 }
