@@ -19,9 +19,15 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: const Text('Tarefas'),
             ),
-            body: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            body: ListView(
               children: const [
+                Task('Aprendendo Flutter'),
+                Task('Aprendendo Flutter'),
+                Task('Aprendendo Flutter'),
+                Task('Aprendendo Flutter'),
+                Task('Aprendendo Flutter'),
+                Task('Aprendendo Flutter'),
+                Task('Aprendendo Flutter'),
                 Task('Aprendendo Flutter'),
                 Task('Aprendendo Flutter'),
                 Task('Aprendendo Flutter'),
