@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'meeting_scaffold.dart';
+import 'task.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,17 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const MeetingScaffold());
+        home: Scaffold(
+            appBar: AppBar(
+              title: const Text('Tarefas'),
+            ),
+            body: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Task('Aprendendo Flutter'),
+                Task('Aprendendo Flutter'),
+                Task('Aprendendo Flutter'),
+              ],
+            )));
   }
 }
