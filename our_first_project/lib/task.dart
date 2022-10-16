@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class Task extends StatefulWidget {
   final String name;
   final String picture;
-  const Task(this.name, this.picture, {Key? key}) : super(key: key);
+  final int difficulty;
+  const Task(this.name, this.picture, this.difficulty, {Key? key})
+      : super(key: key);
 
   @override
   State<Task> createState() => _TaskState();
@@ -56,27 +58,37 @@ class _TaskState extends State<Task> {
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue,
+                                color: widget.difficulty >= 1
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue,
+                                color: widget.difficulty >= 2
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue,
+                                color: widget.difficulty >= 3
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue[100],
+                                color: widget.difficulty >= 4
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue[100],
+                                color: widget.difficulty >= 5
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                             ],
                           ),
@@ -115,7 +127,9 @@ class _TaskState extends State<Task> {
                       width: 200,
                       child: LinearProgressIndicator(
                         color: Colors.white,
-                        value: level.toDouble() / 10,
+                        value: widget.difficulty > 0
+                            ? (level.toDouble() / widget.difficulty) / 10
+                            : 1,
                       ),
                     ),
                   ),
