@@ -9,7 +9,7 @@ class Task extends StatefulWidget {
 }
 
 class _TaskState extends State<Task> {
-  int nivel = 0;
+  int level = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -44,14 +44,34 @@ class _TaskState extends State<Task> {
                       ElevatedButton(
                           onPressed: () {
                             setState(() {
-                              nivel++;
+                              level++;
                             });
                           },
                           child: const Icon(Icons.arrow_drop_down))
                     ]),
               ),
-              Text('Nivel : $nivel',
-                  style: const TextStyle(color: Colors.white))
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      width: 200,
+                      child: LinearProgressIndicator(
+                        color: Colors.white,
+                        value: level.toDouble() / 10,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Nivel : $level',
+                      style: const TextStyle(color: Colors.white, fontSize: 16),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ],

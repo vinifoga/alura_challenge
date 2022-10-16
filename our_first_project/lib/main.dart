@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: const Text('Tarefas'),
+              title: const Text('Tasks'),
             ),
             body: ListView(
               children: const [
