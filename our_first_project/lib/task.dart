@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Task extends StatefulWidget {
   final String name;
-  const Task(this.name, {Key? key}) : super(key: key);
+  final String picture;
+  const Task(this.name, this.picture, {Key? key}) : super(key: key);
 
   @override
   State<Task> createState() => _TaskState();
@@ -32,6 +33,10 @@ class _TaskState extends State<Task> {
                         color: Colors.black26,
                         width: 72,
                         height: 100,
+                        child: Image.network(
+                          widget.picture,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       SizedBox(
                         width: 200,
