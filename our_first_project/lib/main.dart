@@ -26,16 +26,17 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Tasks'),
         ),
         body: ListView(
+          // ignore: prefer_const_literals_to_create_immutables
           children: [
             const Task('Aprender Flutter',
                 'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
-            Task('Andar de Bike',
+            const Task('Andar de Bike',
                 'https://tswbike.com/wp-content/uploads/2020/09/108034687_626160478000800_2490880540739582681_n-e1600200953343.jpg'),
-            Task('Meditar',
+            const Task('Meditar',
                 'https://manhattanmentalhealthcounseling.com/wp-content/uploads/2019/06/Top-5-Scientific-Findings-on-MeditationMindfulness-881x710.jpeg'),
-            Task('Ler',
+            const Task('Ler',
                 'https://thebogotapost.com/wp-content/uploads/2017/06/636052464065850579-137719760_flyer-image-1.jpg'),
-            Task('Jogar',
+            const Task('Jogar',
                 'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg'),
           ],
         ),

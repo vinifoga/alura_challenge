@@ -77,9 +77,7 @@ class OurFirstProject extends StatelessWidget {
               ),
             ),
             ElevatedButton(
-              onPressed: () {
-                print('Apertou o Botão');
-              },
+              onPressed: () {},
               child: const Text('Aperte o Botão!'),
             )
           ],

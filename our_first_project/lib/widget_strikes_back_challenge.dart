@@ -13,7 +13,7 @@ class _TaskState extends State<WidgetStrikesBackChallenge> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.add_task_rounded),
+        leading: const Icon(Icons.add_task_rounded),
         title: const Text('Flutter: First Steps'),
       ),
       body: Padding(
@@ -22,22 +22,22 @@ class _TaskState extends State<WidgetStrikesBackChallenge> {
           color: Colors.white10,
           child: Column(
             children: [
-              groupRow(
+              GroupRow(
                 colorOne: const Color.fromARGB(255, 146, 77, 77),
                 colorTwo: Colors.pink,
                 colorThree: Colors.blue,
               ),
-              groupRow(
+              GroupRow(
                 colorOne: Colors.pinkAccent,
                 colorTwo: Colors.purple,
                 colorThree: Colors.blueAccent,
               ),
-              groupRow(
+              GroupRow(
                 colorOne: const Color.fromARGB(255, 247, 168, 194),
                 colorTwo: Colors.yellow,
                 colorThree: Colors.greenAccent,
               ),
-              groupRow(
+              GroupRow(
                 colorOne: const Color.fromARGB(255, 149, 206, 179),
                 colorTwo: const Color.fromARGB(255, 110, 18, 49),
                 colorThree: const Color.fromARGB(255, 83, 178, 255),
@@ -50,11 +50,12 @@ class _TaskState extends State<WidgetStrikesBackChallenge> {
   }
 }
 
-class groupRow extends StatelessWidget {
+// ignore: must_be_immutable
+class GroupRow extends StatelessWidget {
   Color colorOne = Colors.white;
   Color colorTwo = Colors.white;
   Color colorThree = Colors.white;
-  groupRow({
+  GroupRow({
     Key? key,
     required this.colorOne,
     required this.colorTwo,
