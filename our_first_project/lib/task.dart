@@ -38,13 +38,49 @@ class _TaskState extends State<Task> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      SizedBox(
-                        width: 200,
-                        child: Text(
-                          widget.name,
-                          style: const TextStyle(
-                              fontSize: 22, overflow: TextOverflow.ellipsis),
-                        ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: 200,
+                            child: Text(
+                              widget.name,
+                              style: const TextStyle(
+                                  fontSize: 22,
+                                  overflow: TextOverflow.ellipsis),
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                size: 15,
+                                color: Colors.blue,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 15,
+                                color: Colors.blue,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 15,
+                                color: Colors.blue,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 15,
+                                color: Colors.blue[100],
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 15,
+                                color: Colors.blue[100],
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                       SizedBox(
                         height: 52,
