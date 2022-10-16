@@ -41,13 +41,28 @@ class _TaskState extends State<Task> {
                               fontSize: 22, overflow: TextOverflow.ellipsis),
                         ),
                       ),
-                      ElevatedButton(
+                      SizedBox(
+                        height: 52,
+                        width: 52,
+                        child: ElevatedButton(
                           onPressed: () {
                             setState(() {
                               level++;
                             });
                           },
-                          child: const Icon(Icons.arrow_drop_down))
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: const [
+                              Icon(Icons.arrow_drop_up),
+                              Text(
+                                'UP',
+                                style: TextStyle(fontSize: 12),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
                     ]),
               ),
               Row(
