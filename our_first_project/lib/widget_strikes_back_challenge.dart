@@ -20,7 +20,7 @@ class _TaskState extends State<WidgetStrikesBackChallenge> {
         padding: const EdgeInsets.all(8.0),
         child: Container(
           color: Colors.white10,
-          child: Column(
+          child: ListView(
             children: [
               GroupRow(
                 colorOne: const Color.fromARGB(255, 146, 77, 77),
@@ -70,17 +70,44 @@ class GroupRow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            color: colorOne,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 5,
+              ),
+              borderRadius: BorderRadius.circular(25),
+              color: colorOne,
+            ),
             width: 120,
             height: 150,
           ),
-          Container(
-            color: colorTwo,
-            width: 120,
-            height: 150,
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 5,
+                  ),
+                  borderRadius: BorderRadius.circular(25),
+                  color: colorTwo,
+                ),
+                width: 120,
+                height: 150,
+              ),
+              const Icon(Icons.person),
+            ],
           ),
           Container(
-            color: colorThree,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 5,
+              ),
+              borderRadius: BorderRadius.circular(25),
+              color: colorThree,
+            ),
             width: 120,
             height: 150,
           ),
