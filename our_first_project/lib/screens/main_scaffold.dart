@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:our_first_project/task.dart';
+import 'package:our_first_project/components/task.dart';
 
 class MainScaffold extends StatefulWidget {
   const MainScaffold({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _MainScaffoldState extends State<MainScaffold> {
       ),
       body: AnimatedOpacity(
         opacity: taskOpacity ? 1 : 0,
-        duration: Duration(milliseconds: 800),
+        duration: const Duration(milliseconds: 800),
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
