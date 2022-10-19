@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'difficulty.dart';
+
 class Task extends StatefulWidget {
   final String name;
   final String picture;
@@ -65,44 +67,8 @@ class _TaskState extends State<Task> {
                                   overflow: TextOverflow.ellipsis),
                             ),
                           ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.difficulty >= 1
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.difficulty >= 2
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.difficulty >= 3
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.difficulty >= 4
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.difficulty >= 5
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                            ],
+                          Difficulty(
+                            difficultyLevel: widget.difficulty,
                           ),
                         ],
                       ),
